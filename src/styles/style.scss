@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Roboto:wght@100;300;400;700;900&display=swap');
+
+// body,html{
+//     font-family: 'Source Sans Pro', sans-serif;
+//     height: 100vh;
+//     margin: 0;
+// }
+
+// body::-webkit-scrollbar {
+//     display: none;
+// }
+
+$walrus-Gold: RGB(230,193,45);
+$walrus-Blue: RGB(26,38,76);
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+    color: white;
+}
+
+body, html{
+    background-color: $walrus-Blue;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0 0 0 0;
+    padding: 1em 0 0 0;
+    li{
+        padding: 1em 0;
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: $walrus-Gold;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.Header{
+    height: 15vh;
+    h1{
+        font-size: 3em;
+        justify-content: center;
+        display: flex;
+        padding: 1em 0 1em 0;
+        color: $walrus-Gold;
+    }
+}
+
+.Buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'Math250 Math251 Stats254'
+    '. Comp166 .';
+    row-gap: 4em;
+    padding: 7em 0 0 0;
+    #Math-250A{
+        grid-area: Math250;
+        text-align: center;
+    }
+    #Math-251{
+        grid-area: Math251;
+        text-align: center;
+    }
+    #Stats-254{
+        grid-area: Stats254;
+        text-align: center;
+    }
+    #Comp-166{
+        grid-area: Comp166;
+        text-align: center;
+    }
+}
+
+.ProblemGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'Left Middle Right';
+    height: 70vh;
+    #Left{
+        grid-area: Left;
+        text-align: center;
+    }
+    #Middle{
+        grid-area: Middle;
+        text-align: center;
+    }
+    #Right{
+        grid-area: Right;
+        text-align: center;
+    }
+}
